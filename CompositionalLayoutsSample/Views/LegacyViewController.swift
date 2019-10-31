@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  LegacyViewController.swift
 //  CompositionalLayoutsSample
 //
-//  Created by 伊藤凌也 on 2019/10/30.
+//  Created by 伊藤凌也 on 2019/11/01.
 //  Copyright © 2019 ry-itto. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LegacyViewController: UIViewController {
 
     var collectionView: UICollectionView!
 
@@ -23,29 +23,18 @@ class ViewController: UIViewController {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(TextCell.self, forCellWithReuseIdentifier: TextCell.reuseIdentifier)
         collectionView.dataSource = self
+        collectionView.contentInset = .init(top: 20, left: 20, bottom: 20, right: 20)
         view.addSubview(collectionView)
      }
 
     func createLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-                                             heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.3))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
-        section.orthogonalScrollingBehavior = .continuous
-
-        let layout = UICollectionViewCompositionalLayout(section: section)
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.bounds.width - 40, height: view.bounds.height * 0.3)
         return layout
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension LegacyViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         5
     }

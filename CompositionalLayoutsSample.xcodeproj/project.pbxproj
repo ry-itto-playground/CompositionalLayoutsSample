@@ -14,6 +14,7 @@
 		BF634BD023699A1200298010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF634BCE23699A1200298010 /* Main.storyboard */; };
 		BF634BD223699A1500298010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF634BD123699A1500298010 /* Assets.xcassets */; };
 		BF634BD523699A1500298010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF634BD323699A1500298010 /* LaunchScreen.storyboard */; };
+		BFDE8898236B8F0600F5A1DB /* LegacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE8897236B8F0600F5A1DB /* LegacyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BF634BD123699A1500298010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF634BD423699A1500298010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF634BD623699A1500298010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDE8897236B8F0600F5A1DB /* LegacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				BF634BDD23699AC700298010 /* Cells */,
 				BF634BCC23699A1200298010 /* ViewController.swift */,
+				BFDE8897236B8F0600F5A1DB /* LegacyViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDE8898236B8F0600F5A1DB /* LegacyViewController.swift in Sources */,
 				BF634BCD23699A1200298010 /* ViewController.swift in Sources */,
 				BF634BC923699A1200298010 /* AppDelegate.swift in Sources */,
 				BF2DCB37236B44E40004914D /* TextCell.swift in Sources */,
